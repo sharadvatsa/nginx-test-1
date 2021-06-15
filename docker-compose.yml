@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  web:
+    restart: always
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./config:/etc/nginx/conf.d
